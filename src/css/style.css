@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --white: #E0E0E0;
+    --black: #1C1C1C;
+    --gray: #707070;
+    --light-gray: #AAAAAA;
+    --dark-gray: ##434343;
+    --red: #E14434;
+    --green: #3EC15E;
+    --blue: #3774CF;
+    --yellow: #F7E756;
+    --pink: #F3B4AE;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+    margin-left: 10px;
+    padding: 3px;
+}
+
+main a {
+    background-color: var(--blue);
+    border-radius: 12px;
+    margin: 10px;
+    font-size: 1.1em;
+    color: white;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cabecalho .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cabecalho nav li a {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--black);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.25s;
+}
+
+.cabecalho nav li a:hover {
+    background-color: var(--red);
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 132px);
+    padding: 0 30px 30px;
+}
+
+.container .imagem-titulo {
+    max-width: 500px;
+}
+
+.container .descricao {
+    color: var(--black);
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.container .botao-trailer {
+    background-color: var(--red);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s all ease-in-out;
+}
+
+.container .botao-trailer:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 52, 50, 0.749);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.conteudo-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px;
+}
+
+.fechar-modal {
+    background-color: var(--white);
+    color: var(--red);
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.modal iframe {
+    border-width: 0;
+    width: 640px;
+    height: 360px;
+}
+
+.modal.aberto {
+    opacity: 1;
+    visibility: visible;
+}
